@@ -1,0 +1,39 @@
+
+PROCEDURE Dot product(var v1,v2:ARRAY OF INTEGER[n]
+Begin
+var ps:integer;
+for i from 0 to n step 1 do 
+ps=ps+v1[i]*v2[i];
+write(ps)
+End
+
+ALGORITHM Dot product
+Var 
+v1,v2:Array of integer[n]
+begin 
+if(ps=0)then
+write(v1 and v2 are orthogonal);
+else
+write(v1 and v2 are not orthogonal);
+end
+
+ALGORITHM array_sum_two_element
+VAR
+  tab : ARRAY_OF type[50];
+  i,n : INTEGER; 
+BEGIN
+   // Read the size
+   Read(n);
+   // Read elements
+   FOR i FROM 0 TO n-1 STEP 1  DO
+       Read(tab[i]);
+   END_FOR
+   // Add successive element
+   FOR i FROM 0 TO n-2 STEP 1  DO
+   tab[i] := tab[i]+tab[i+1];
+   END_FOR
+   // Display the array
+   FOR i FROM 0 TO n-1 STEP 1  DO
+       Write(tab[i])
+   END_FOR
+END
